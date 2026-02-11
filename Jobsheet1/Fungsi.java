@@ -1,3 +1,5 @@
+ package Jobsheet1;
+ 
 public class Fungsi {
     static int hitungPendapatan(int[] stok, int[] harga) {
         int total = 0;

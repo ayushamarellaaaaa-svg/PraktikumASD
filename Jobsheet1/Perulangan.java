@@ -1,3 +1,5 @@
+package Jobsheet1;
+
 import java.util.Scanner;
 
 public class Perulangan {
