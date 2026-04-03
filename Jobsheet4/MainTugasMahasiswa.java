@@ -1,4 +1,4 @@
-package Jobsheet5;
+package Jobsheet4;
 
 public class MainTugasMahasiswa {
     public static void main(String[] args) {
