@@ -14,10 +14,10 @@ public class Dosen05 {
     }
 
     void tampil() {
-        System.out.println("Kode: " + kode);
-        System.out.println("Nama: " + nama);
+        System.out.println("Kode          : " + kode);
+        System.out.println("Nama          : " + nama);
         String jk = jenisKelamin ? "Laki-laki" : "Perempuan";
-        System.out.println("Jenis Kelamin: " + jk);
-        System.out.println("Usia: " + usia);
+        System.out.println("Jenis Kelamin : " + jk);
+        System.out.println("Usia          : " + usia);
     }
 }
