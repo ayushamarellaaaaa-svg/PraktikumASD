@@ -15,7 +15,7 @@ public class Peminjaman {
     void hitungDenda() {
         if (lamaPinjam > 5) {
             int terlambat = lamaPinjam - 5;
-            denda = terlambat * 2000;
+            denda = terlambat * 0;
         } else { 
             denda = 0;
         }

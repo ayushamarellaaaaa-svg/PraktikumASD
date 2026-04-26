@@ -44,6 +44,9 @@ public class MahasiswaDemo05 {
         System.out.print("IPK: ");
         double cari = sc.nextDouble();
 
+        list.bubbleSort();
+        list.tampil();
+
         System.out.println("=========================");
         System.out.println("menggunakan binary search");
         System.out.println("=========================");
@@ -52,6 +55,7 @@ public class MahasiswaDemo05 {
         list.tampilPosisi(cari, pss2);
         list.tampilDataSearch(cari, pss2);
         sc.nextLine();
+        
 
         // System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC): ");
         // list.bubbleSort();

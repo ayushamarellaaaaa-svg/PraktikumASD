@@ -8,16 +8,16 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Mahasiswa[] mhs = {
-                new Mahasiswa("22001", "Andi", "Teknik Informatika"),
-                new Mahasiswa("22002", "Budi", "Teknik Informatika"),
-                new Mahasiswa("22003", "Citra", "Sistem Informasi Bisnis")
+                new Mahasiswa("22001", "Andi", "Teknik Informatika", "08253637"),
+                new Mahasiswa("22002", "Budi", "Teknik Informatika", "0824567890"),
+                new Mahasiswa("22003", "Citra", "Sistem Informasi Bisnis", "0835678901")
         };
 
         Buku[] buku = {
-                new Buku("B001", "Algortima", 2020),
-                new Buku("B002", "Basis Data", 2019),
-                new Buku("B003", "Pemrograman", 2021),
-                new Buku("B004", "Fisika", 2024)
+                new Buku("B001", "Algortima", 2020, "Gramedia"),
+                new Buku("B002", "Basis Data", 2019, "Erlangga"),
+                new Buku("B003", "Pemrograman", 2021, "Gramedia"),
+                new Buku("B004", "Fisika", 2024, "Erlangga")
         };
 
         Peminjaman[] pinjam = {
@@ -46,28 +46,28 @@ public class Main {
 
                 case 1:
                     System.out.println("DATA MAHASISWA");
-                    System.out.println("--------------------------------------------------");
-                    System.out.printf("| %-5s | %-10s | %-25s |\n", "NIM", "Nama", "Prodi");
-                    System.out.println("--------------------------------------------------");
+                    System.out.println("------------------------------------------------------------------");
+                    System.out.printf("| %-5s | %-10s | %-25s | %-10s |\n", "NIM", "Nama", "Prodi", "no_hp");
+                    System.out.println("------------------------------------------------------------------");
 
                     for (int i = 0; i < mhs.length; i++) {
                         mhs[i].tampil();
                     }
 
-                    System.out.println("--------------------------------------------------");
+                    System.out.println("------------------------------------------------------------------");
                     break;
 
                 case 2:
                     System.out.println("\nDATA BUKU");
-                    System.out.println("-----------------------------------");
-                    System.out.printf("| %-5s | %-15s | %-5s |\n", "Kode", "Judul", "Tahun");
-                    System.out.println("-----------------------------------");
+                    System.out.println("-------------------------------------------------");
+                    System.out.printf("| %-5s | %-15s | %-5s | %-25s |\n", "Kode", "Judul", "Tahun", "penerbit");
+                    System.out.println("-------------------------------------------------");
 
                     for (int i = 0; i < buku.length; i++) {
                         buku[i].tampil();
                     }
 
-                    System.out.println("-----------------------------------");
+                    System.out.println("--------------------------------------------------");
                     break;
 
                 case 3:
@@ -97,15 +97,22 @@ public class Main {
 
                     System.out.println("\nDATA SETELAH SORTING DENDA");
                     System.out.println("-------------------------------------------------------------");
-                    System.out.printf("| %-5s | %-10s | %-15s | %-5s | %-10s |\n", "NIM", "Nama", "Judul Buku", "Hari",
-                            "Denda");
+                    System.out.printf("| %-5s | %-10s | %-15s | %-5s | %-10s |\n", "NIM", "Nama", "Judul Buku", "Hari", "Denda");
                     System.out.println("-------------------------------------------------------------");
 
+                    int jumlahKenaDenda = 0;
+                    
                     for (int i = 0; i < pinjam.length; i++) {
                         pinjam[i].tampil();
+
+                        if (pinjam[i].denda > 0) {
+                            jumlahKenaDenda++;
+                            }
                     }
 
+
                     System.out.println("-------------------------------------------------------------");
+                    System.out.println("Jumlah Mahasiswa yang terkena denda: " +jumlahKenaDenda);
                     break;
 
                 case 5:
