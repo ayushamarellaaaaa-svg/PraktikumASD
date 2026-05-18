@@ -9,6 +9,11 @@ public class DLLAntrian {
         this.head = null;
         this.tail = null;
         this.size = 0;
+
+        tambahAntrian("Ainra","08224500000");
+        tambahAntrian("Danra", "08224511111");
+        tambahAntrian("Sanri", "08224522222");
+        tambahAntrian("Vania", "082245333333");
     }
 
     public boolean isEmpty() {
@@ -31,6 +36,15 @@ public class DLLAntrian {
         return noAntrian;
     }
 
+    public void renumberateAntrian() {
+        NodeAntrian current = head;
+        int noAntrian = 1;
+        while (current != null) {
+            current.data.noAntrian = noAntrian++;
+            current = current.next;
+        }
+    }
+
     public Pembeli hapusAntrian() {
         if (isEmpty()) {
             System.out.println("Antrian kosong!");
@@ -47,6 +61,7 @@ public class DLLAntrian {
             head.prev = null;
         }
         size--;
+        renumberateAntrian();
         return Dilayani;
     }
 
