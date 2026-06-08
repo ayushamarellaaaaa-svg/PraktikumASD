@@ -11,13 +11,14 @@ public class Main {
         int pilihan;
 
         do {
-            System.out.println("\n===============================");
+            System.out.println("\n============================");
             System.out.println("SISTEM ANTRIAN ROYAL DELISH");
-            System.out.println("===============================");
+            System.out.println("============================");
             System.out.println("1. Tambah Antrian");
             System.out.println("2. Cetak Antrian");
             System.out.println("3. Hapus Antrian dan Pesanan");
             System.out.println("4. Lapor Pesanan");
+            // System.out.println("5. Hapus Antrian");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = sc.nextInt();
@@ -46,6 +47,11 @@ public class Main {
                         break;
                     }
 
+                    System.out.print("Masukkan Nomor Antrian: ");
+                    int indexRemove = sc.nextInt();
+                    sc.nextLine();
+                    antrian.remove(indexRemove);
+                    System.out.println();
                     System.out.print("Kode Pesanan : ");
                     int kodePesanan = sc.nextInt();
                     sc.nextLine();
@@ -66,6 +72,13 @@ public class Main {
                 case 4:
                     pesanan.tampilPesanan();
                     break;
+                
+                // case 5:
+                //     System.out.print("Masukkan Nomor Antrian: ");
+                //     int indexRemove = sc.nextInt();
+                //     sc.nextLine();
+                //     antrian.remove(indexRemove);
+                //     break;
 
                 case 0:
                     System.out.println("Terima kasih!");

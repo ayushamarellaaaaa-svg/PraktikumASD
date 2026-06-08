@@ -81,4 +81,30 @@ public class DLLAntrian {
         }
         System.out.println("");
     }
+
+    public void remove(int index) {
+        if (isEmpty()) {
+            System.out.println("Tidak ada antrian");
+            return;
+        }
+
+        if (index < 0 || index >= size) {
+            System.out.println("Index tidak valid!");
+            return;
+        }
+
+        NodeAntrian current = head;
+        for (int i = 1; i < index; i++) {
+            current = current.next;
+        }
+
+        Pembeli deleted = current.data;
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+
+        size--;
+        System.out.println("Nomor Antrian berhasil dihapus");
+        deleted.tampilInformasi();
+        renumberateAntrian();
+    }
 }
